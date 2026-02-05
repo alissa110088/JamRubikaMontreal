@@ -5,6 +5,7 @@ public class Convoyer : MonoBehaviour
 {
     [SerializeField] private Vector3 direction;
 
+    private float speed = 0.3f;
     private void Start()
     {
         direction = direction.normalized;
@@ -15,7 +16,7 @@ public class Convoyer : MonoBehaviour
         
         if (other.gameObject.CompareTag("labubu"))
         {
-            other.transform.position +=  direction;
+            other.transform.position += direction * speed;
         }
     }
 

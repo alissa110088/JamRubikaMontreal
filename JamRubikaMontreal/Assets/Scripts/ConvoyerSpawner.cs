@@ -23,6 +23,6 @@ public class ConvoyerSpawner : MonoBehaviour
     private void SpawnLabubu()
     {
         Instantiate(labubu, anchorSpawn.position, Quaternion.identity);
-        //StartCoroutine( SpawnDelay());
+        StartCoroutine( SpawnDelay());
     }
 }
