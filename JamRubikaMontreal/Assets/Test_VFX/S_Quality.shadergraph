@@ -874,7 +874,7 @@
     "m_LiteralFloatMode": false,
     "m_RangeValues": {
         "x": 50.0,
-        "y": 2048.0
+        "y": 4096.0
     },
     "m_SliderType": 2,
     "m_SliderPower": 3.0,
