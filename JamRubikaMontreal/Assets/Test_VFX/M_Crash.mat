@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Quality
-  m_Shader: {fileID: -6465566751694194690, guid: 39e1b1a1573f04846a8f451b21e2d8a3, type: 3}
+  m_Name: M_Crash
+  m_Shader: {fileID: -6465566751694194690, guid: d0d5caf1000252444a151c3df8e1f90f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -36,10 +36,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
-    m_Floats:
-    - Pixels_Levels: 639.8856
-    - _Levels: 0
-    - _Pixels_Levels: 2048
+    m_Floats: []
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1
