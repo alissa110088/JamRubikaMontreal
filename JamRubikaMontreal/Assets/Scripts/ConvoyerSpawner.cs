@@ -16,7 +16,7 @@ public class ConvoyerSpawner : AffectedBySpeed
 
     private IEnumerator SpawnDelay()
     {
-        yield return new WaitForSeconds(spawnInterval * speedMultiplicator);
+        yield return new WaitForSeconds(spawnInterval / speedMultiplicator);
         SpawnLabubu();
     }
 

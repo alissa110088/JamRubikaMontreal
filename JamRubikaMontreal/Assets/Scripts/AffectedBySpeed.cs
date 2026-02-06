@@ -2,5 +2,5 @@ using UnityEngine;
 
 public abstract class AffectedBySpeed : MonoBehaviour
 {
-    protected int speedMultiplicator = 1;
+    public static int speedMultiplicator = 1;
 }
