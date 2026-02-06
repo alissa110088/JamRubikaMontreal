@@ -11,7 +11,6 @@ public class labubu : MonoBehaviour
     {
         if (other.gameObject.CompareTag("labubu"))
         {
-            Debug.Log("collided");
             rb.AddExplosionForce(300f, transform.position, 5f,3f,ForceMode.Force);
         }
     }
