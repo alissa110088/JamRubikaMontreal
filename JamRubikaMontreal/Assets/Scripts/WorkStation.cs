@@ -6,8 +6,8 @@ using UnityEngine;
 public class WorkStation : AffectedBySpeed
 {
     [SerializeField] private Convoyer convoyer;
-    [SerializeField] private FeedBackRobotEfficacity robotText;
-
+    
+    public FeedBackRobotEfficacity robotText;
     private labubu labubuuu;
     public float waitTime = .5f;
     private void OnTriggerEnter(Collider other)
@@ -29,6 +29,6 @@ public class WorkStation : AffectedBySpeed
         labubuuu.isWorking = false;
         float lTimeToAdd = UnityEngine.Random.Range(0f, 0.8f);
         waitTime += lTimeToAdd;
-        robotText.UpdateEfficacity(lTimeToAdd);
+        robotText.UpdateEfficacity(waitTime);
     }
 }
