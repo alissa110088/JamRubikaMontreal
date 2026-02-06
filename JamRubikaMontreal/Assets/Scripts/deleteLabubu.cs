@@ -8,6 +8,7 @@ public class deleteLabubu : MonoBehaviour
         if (other.gameObject.CompareTag("labubu"))
         {
             Destroy(other.gameObject);
+            GameManager.Instance.LabubuCounter--;
         }
     }
 }

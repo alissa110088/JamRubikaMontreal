@@ -23,6 +23,7 @@ public class ConvoyerSpawner : AffectedBySpeed
     private void SpawnLabubu()
     {
         Instantiate(labubu, anchorSpawn.position, Quaternion.identity);
+        GameManager.Instance.LabubuCounter++;
         StartCoroutine( SpawnDelay());
     }
 }
