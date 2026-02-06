@@ -13,11 +13,14 @@ public class Convoyer : MonoBehaviour
 
     private void OnCollisionStay(Collision other)
     {
-        
+        Debug.Log("here pettage de plond");
         if (other.gameObject.CompareTag("labubu"))
         {
-            other.transform.position += direction * speed;
+            //haaaaaaaaaaa personne regarde
+            labubu labubu = other.gameObject.GetComponent<labubu>();
+            Debug.Log(labubu.isWorking);
+            if(!labubu.isWorking)
+                other.transform.position += direction * speed;
         }
     }
-
 }

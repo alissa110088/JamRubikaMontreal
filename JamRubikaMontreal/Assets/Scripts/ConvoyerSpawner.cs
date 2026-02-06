@@ -7,7 +7,7 @@ public class ConvoyerSpawner : MonoBehaviour
     [SerializeField] private GameObject labubu;
     [SerializeField] private Transform anchorSpawn;
     
-    private float spawnInterval = 1f;
+    private float spawnInterval = 4f;
 
     private void Start()
     {
