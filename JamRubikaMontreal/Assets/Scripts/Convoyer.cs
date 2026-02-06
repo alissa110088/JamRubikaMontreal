@@ -13,12 +13,10 @@ public class Convoyer : AffectedBySpeed
 
     private void OnCollisionStay(Collision other)
     {
-        Debug.Log("here pettage de plond");
         if (other.gameObject.CompareTag("labubu"))
         {
             //haaaaaaaaaaa personne regarde
             labubu labubu = other.gameObject.GetComponent<labubu>();
-            Debug.Log(labubu.isWorking);
             if(!labubu.isWorking)
                 other.transform.position += direction * speed * speedMultiplicator;
         }
