@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &4216578 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 449848961897161083, guid: 13ccff69775269e4daf1024a002ba722, type: 3}
+  m_PrefabInstance: {fileID: 1751787421}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &26807740
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -180,6 +185,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13ccff69775269e4daf1024a002ba722, type: 3}
+--- !u!1 &81715392 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 449848961897161083, guid: 13ccff69775269e4daf1024a002ba722, type: 3}
+  m_PrefabInstance: {fileID: 419381361}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &101757285 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 449848961897161083, guid: 13ccff69775269e4daf1024a002ba722, type: 3}
+  m_PrefabInstance: {fileID: 311714175}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &119471982
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -237,6 +252,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13ccff69775269e4daf1024a002ba722, type: 3}
+--- !u!1 &145855847 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 449848961897161083, guid: 13ccff69775269e4daf1024a002ba722, type: 3}
+  m_PrefabInstance: {fileID: 119471982}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &205632067 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4784510384375183769, guid: 13ccff69775269e4daf1024a002ba722, type: 3}
@@ -360,6 +380,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 270142537}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &281308380 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 449848961897161083, guid: 13ccff69775269e4daf1024a002ba722, type: 3}
+  m_PrefabInstance: {fileID: 1319370731}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &311714175
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -507,13 +532,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonVoid
   workers:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 81715392}
+  - {fileID: 4216578}
+  - {fileID: 869367592}
+  - {fileID: 101757285}
+  - {fileID: 145855847}
+  - {fileID: 281308380}
+  - {fileID: 962695861}
+  - {fileID: 1434155678}
+  - {fileID: 2040282677}
 --- !u!114 &372739305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1412,6 +1439,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 865667933}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &869367592 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 449848961897161083, guid: 13ccff69775269e4daf1024a002ba722, type: 3}
+  m_PrefabInstance: {fileID: 971492333}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &897626494
 GameObject:
   m_ObjectHideFlags: 0
@@ -1814,6 +1846,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 957782093}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &962695861 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 449848961897161083, guid: 13ccff69775269e4daf1024a002ba722, type: 3}
+  m_PrefabInstance: {fileID: 1147007152}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &963139683 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4784510384375183769, guid: 13ccff69775269e4daf1024a002ba722, type: 3}
@@ -2989,6 +3026,11 @@ Transform:
   - {fileID: 1820636555}
   m_Father: {fileID: 1308935227}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!1 &1434155678 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 449848961897161083, guid: 13ccff69775269e4daf1024a002ba722, type: 3}
+  m_PrefabInstance: {fileID: 827623779}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1440602843
 GameObject:
   m_ObjectHideFlags: 0
@@ -4103,6 +4145,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec47fa407260ade429d0436b0800af88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WorkStation
+--- !u!1 &2040282677 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 449848961897161083, guid: 13ccff69775269e4daf1024a002ba722, type: 3}
+  m_PrefabInstance: {fileID: 26807740}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2055211277
 GameObject:
   m_ObjectHideFlags: 0
