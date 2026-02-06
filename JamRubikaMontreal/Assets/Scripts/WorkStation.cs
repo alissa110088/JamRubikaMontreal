@@ -1,11 +1,15 @@
 using System;
 using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 
 
 public class WorkStation : AffectedBySpeed
 {
     [SerializeField] private Convoyer convoyer;
+    [SerializeField] private GameObject electrifiedState;
+    [SerializeField] private GameObject normalState;
+    [SerializeField] private ParticleSystem electricalParticle;
     
     public FeedBackRobotEfficacity robotText;
     private labubu labubuuu;
@@ -21,6 +25,19 @@ public class WorkStation : AffectedBySpeed
         }
     }
 
+    public IEnumerator Electrocuted()
+    {
+        normalState.SetActive(false);
+        electrifiedState.SetActive(true);
+
+        electrifiedState.transform.DOShakePosition(3f, 1f, 10,90, true, true, ShakeRandomnessMode.Harmonic);
+        electricalParticle.Play();
+        yield return new WaitForSeconds(.5f);
+        normalState.SetActive(true);
+        electrifiedState.SetActive(false);
+    }
+
+    
     private IEnumerator WorkingWait()
     {
         yield return new WaitForSeconds(waitTime * speedMultiplicator);

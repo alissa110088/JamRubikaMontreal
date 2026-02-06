@@ -10,6 +10,7 @@ public class ElectrocuteButton : AffectedBySpeed
         foreach (WorkStation JENAIMARE in workers)
         {
             JENAIMARE.waitTime = .5f * speedMultiplicator;
+            StartCoroutine(JENAIMARE.Electrocuted());
             JENAIMARE.robotText.UpdateEfficacity(.5f);
         }
     }
