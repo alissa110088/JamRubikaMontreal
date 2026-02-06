@@ -37,7 +37,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Pixels_Levels: 50
+    - Pixels_Levels: 4096
     - _Levels: 0
     - _Pixels_Levels: 2048
     m_Colors: []
