@@ -2,12 +2,13 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class WorkStation : MonoBehaviour
+
+public class WorkStation : AffectedBySpeed
 {
     [SerializeField] private Convoyer convoyer;
 
     private labubu labubuuu;
-    private float waitTime = .5f;
+    public float waitTime = .5f;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("labubu"))
@@ -21,10 +22,10 @@ public class WorkStation : MonoBehaviour
 
     private IEnumerator WorkingWait()
     {
-        yield return new WaitForSeconds(waitTime);
-        Debug.Log("finished");
+        yield return new WaitForSeconds(waitTime * speedMultiplicator);
         labubuuu.transform.position =
             new Vector3(labubuuu.transform.position.x, labubuuu.transform.position.y + .02f, labubuuu.transform.position.z);
         labubuuu.isWorking = false;
+        waitTime += UnityEngine.Random.Range(0f, 0.8f);
     }
 }

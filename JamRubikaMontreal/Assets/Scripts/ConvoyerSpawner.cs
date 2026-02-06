@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class ConvoyerSpawner : MonoBehaviour
+public class ConvoyerSpawner : AffectedBySpeed
 {
     [SerializeField] private GameObject labubu;
     [SerializeField] private Transform anchorSpawn;
@@ -16,7 +16,7 @@ public class ConvoyerSpawner : MonoBehaviour
 
     private IEnumerator SpawnDelay()
     {
-        yield return new WaitForSeconds(spawnInterval);
+        yield return new WaitForSeconds(spawnInterval * speedMultiplicator);
         SpawnLabubu();
     }
 

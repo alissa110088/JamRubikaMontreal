@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class Convoyer : MonoBehaviour
+public class Convoyer : AffectedBySpeed
 {
     [SerializeField] private Vector3 direction;
 
@@ -20,7 +20,7 @@ public class Convoyer : MonoBehaviour
             labubu labubu = other.gameObject.GetComponent<labubu>();
             Debug.Log(labubu.isWorking);
             if(!labubu.isWorking)
-                other.transform.position += direction * speed;
+                other.transform.position += direction * speed * speedMultiplicator;
         }
     }
 }
