@@ -37,6 +37,14 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _SampleTexture2D_5f760bcd8bd846dab57765316a5b4f01_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 714efc7d2bb74db47a846a254b756137, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_85d3185a2f2e46008887180fbd537be7_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 714efc7d2bb74db47a846a254b756137, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_f541f176df5644ec991add7c771087e5_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: 55de78d81939bc54aaf33e5b16914443, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -56,8 +64,13 @@ Material:
     m_Ints: []
     m_Floats:
     - _Emissive: 3
+    - _Power_Flash: 5
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _Speed: 30
+    - _Speed_Flash: 30
+    - _Speed_Rotate: 0.5
+    - _Tiling: 3
     m_Colors:
     - _Color: {r: 0.5707547, g: 0.85316145, b: 1, a: 1}
   m_BuildTextureStacks: []

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class ConvoyerSpawner : AffectedBySpeed
 {
@@ -23,6 +24,9 @@ public class ConvoyerSpawner : AffectedBySpeed
     private void SpawnLabubu()
     {
         Instantiate(labubu, anchorSpawn.position, Quaternion.identity);
+        GameManager.Instance.LabubuCounter++;
         StartCoroutine( SpawnDelay());
+        
+        
     }
 }
