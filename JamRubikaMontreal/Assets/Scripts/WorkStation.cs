@@ -28,7 +28,7 @@ public class WorkStation : AffectedBySpeed
             new Vector3(labubuuu.transform.position.x, labubuuu.transform.position.y + .02f, labubuuu.transform.position.z);
         labubuuu.isWorking = false;
         float lTimeToAdd = UnityEngine.Random.Range(0f, 0.8f);
-        waitTime += lTimeToAdd;
+        waitTime += lTimeToAdd / (speedMultiplicator + .1f);
         robotText.UpdateEfficacity(waitTime);
     }
 }
