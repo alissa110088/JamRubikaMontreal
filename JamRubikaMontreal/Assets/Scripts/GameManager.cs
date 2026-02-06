@@ -1,12 +1,15 @@
 using System;
 using System.Collections;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private int MaxLabubu = 400;
-    [SerializeField] private RawImage crashImage;
+    [SerializeField] private UniversalRendererData urd;
+    [SerializeField] private Material crash;
     
     private int labubuCounter = 0;
     public static GameManager Instance;
@@ -39,9 +42,11 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator SetCrash()
     {
-        crashImage.enabled = true;
+        var feature = urd.rendererFeatures
+            .OfType<FullScreenPassRendererFeature>()
+            .FirstOrDefault(f => f.name == "FullScreenPassRendererFeature");
+        feature.passMaterial = crash;
         yield return new WaitForSeconds(3f);
         Application.Quit();
-        
     }
 }

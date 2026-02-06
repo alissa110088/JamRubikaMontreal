@@ -5263,6 +5263,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 300b9488cdbd32b4d9fba79eeb4c3e33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LabubuManager
+  MaxLabubu: 400
+  urd: {fileID: 11400000, guid: 0bdc3579b327b26458c7542f7b3287ce, type: 2}
+  crash: {fileID: 0}
 --- !u!4 &2055264664
 Transform:
   m_ObjectHideFlags: 0
