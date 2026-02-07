@@ -71,4 +71,26 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(sounds, sound => sound.name == name);
         s.source.volume = 0.6f;
     }
+
+    public void Play_Finish(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return;
+        }
+
+        s.source.outputAudioMixerGroup = s.audioMixerGroup;
+        s.source.clip = s.clip;
+        s.source.loop = s.loop;
+        s.source.volume = s.volume;
+        s.source.pitch = s.pitch;
+        print(s.source.isPlaying);
+        if (!s.source.isPlaying)
+        {
+            print("Playing " + name);
+            s.source.Play();
+        }
+    }
 }

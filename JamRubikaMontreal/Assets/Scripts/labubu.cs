@@ -18,7 +18,7 @@ public class labubu : MonoBehaviour
         if (other.gameObject.CompareTag("labubu"))
         {
             Explosion.Play();
-            _audio.Play("SFX_Collision");
+            _audio.Play_Finish("SFX_Collision");
             rb.AddExplosionForce(300f, transform.position, 5f,3f,ForceMode.Force);
         }
     }

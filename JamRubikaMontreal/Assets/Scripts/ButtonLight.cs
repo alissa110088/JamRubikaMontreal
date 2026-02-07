@@ -18,6 +18,7 @@ public class ButtonLight : ButtonMaster
             {
                 light.GetComponent<Light>().intensity = 0;
                 light.GetComponent<ParticleSystem>().Play();
+                _audio.Play("SFX_Neon");
             }
             
         }

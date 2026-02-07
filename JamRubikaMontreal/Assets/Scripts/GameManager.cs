@@ -10,6 +10,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public AudioManager _audio;
+    
     [SerializeField] private int MaxLabubu = 30;
     [SerializeField] private UniversalRendererData urd;
     [SerializeField] private Material crash;
@@ -47,9 +49,9 @@ public class GameManager : MonoBehaviour
         input.Player.Enable();
         input.Player.Pause.performed += OnPause;
     }
-
-    private void Start()
+    public void Start()
     {
+        _audio = GameObject.Find("AUDIO_MANAGER").GetComponent<AudioManager>();
         SceneManager.LoadScene("Menu_Main", LoadSceneMode.Additive);
     }
 
@@ -69,7 +71,12 @@ public class GameManager : MonoBehaviour
             .OfType<FullScreenPassRendererFeature>()
             .FirstOrDefault(f => f.name == "FullScreenPassRendererFeature");
         feature.passMaterial = crash;
-        yield return new WaitForSeconds(3f);
+        
+        _audio.Stop("AMB_Labubu");
+        _audio.Play_Finish("SFX_Cursed");
+        
+        yield return new WaitForSeconds(5f);
         Application.Quit();
+        print("Crashed");
     }
 }
