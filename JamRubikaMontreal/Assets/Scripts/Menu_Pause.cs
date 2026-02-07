@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class Menu_Pause : MonoBehaviour
 {
+    [SerializeField] private GameObject pauseMenu;
+    
     public GameObject Panel_Settings;
     public Slider Slider_Sound;
     public Slider Slider_Quality;
@@ -18,8 +20,8 @@ public class Menu_Pause : MonoBehaviour
     public void Resume()
     {
         Time.timeScale = 1;
-        SceneManager.UnloadSceneAsync("Menu_Pause");
-        print("Resume");
+        GameManager.Instance.isMenuOpen = false;
+        Destroy(pauseMenu);
     }
 
     public void Settings()
@@ -56,7 +58,9 @@ public class Menu_Pause : MonoBehaviour
 
     public void Close()
     {
-        Panel_Settings.SetActive(false);
+        Time.timeScale = 1;
+        GameManager.Instance.isMenuOpen = false;
+        Destroy(pauseMenu);
     }
     
     public void SetVolume()

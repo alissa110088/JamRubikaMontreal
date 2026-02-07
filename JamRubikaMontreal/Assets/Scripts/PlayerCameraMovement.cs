@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class PlayerCameraMovement : MonoBehaviour
 {
     float mDelta = 40; 
-    private float speed = 35.0f;
+    public float speed = 35.0f;
 
     
 
