@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0356496350e68874b8ce966f735aac78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HandMovement
-  amplitude: 0.2
+  amplitude: 0.8
   frequency: -10
 --- !u!1001 &1885856106641862613
 PrefabInstance:
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0356496350e68874b8ce966f735aac78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HandMovement
-  amplitude: 0.2
+  amplitude: 0.8
   frequency: -10
 --- !u!1001 &4218780644889952191
 PrefabInstance:
@@ -339,7 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0356496350e68874b8ce966f735aac78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HandMovement
-  amplitude: 0.2
+  amplitude: 0.8
   frequency: -10
 --- !u!1001 &4776405955997455780
 PrefabInstance:
@@ -418,7 +418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0356496350e68874b8ce966f735aac78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HandMovement
-  amplitude: 0.2
+  amplitude: 0.8
   frequency: -10
 --- !u!4 &5947617901838901857 stripped
 Transform:
@@ -506,7 +506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0356496350e68874b8ce966f735aac78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HandMovement
-  amplitude: 0.2
+  amplitude: 0.8
   frequency: -10
 --- !u!4 &8532000950713597307 stripped
 Transform:
@@ -606,7 +606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0356496350e68874b8ce966f735aac78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HandMovement
-  amplitude: 0.2
+  amplitude: 0.8
   frequency: -10
 --- !u!4 &6983904633148257730 stripped
 Transform:

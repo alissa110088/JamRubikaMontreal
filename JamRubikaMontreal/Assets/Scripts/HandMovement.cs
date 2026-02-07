@@ -7,12 +7,12 @@ public class HandMovement : AffectedBySpeed
     public float frequency;
     void Start()
     {
-        handPosition = this.transform.position;
+        handPosition = this.transform.localPosition;
     }
 
     // Update is called once per frame
     void Update()
     {
-        this.transform.position = handPosition + new Vector3(0, Mathf.Sin(Time.time * frequency * speedMultiplicator) * amplitude, 0);
+        this.transform.localPosition = handPosition + new Vector3(0, Mathf.Sin(Time.time * frequency * speedMultiplicator) * amplitude, 0);
     }
 }
