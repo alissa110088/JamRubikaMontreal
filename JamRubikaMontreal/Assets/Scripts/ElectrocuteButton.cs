@@ -11,10 +11,20 @@ public class ElectrocuteButton : AffectedBySpeed
 
     private int countClick = 0;
     
+    private bool First_Click = true;
+
+    private bool First_Kill = true;
+    
     public void OnClick()
     {
         _audio.Play("SFX_Button_Game");
         _audio.Play("SFX_Zap");
+        
+        if (First_Click)
+        {
+            First_Click = false;
+            _audio.Play("V_First_Zap");
+        }
         
         countClick++;
 
@@ -26,6 +36,12 @@ public class ElectrocuteButton : AffectedBySpeed
             {
                 JENAIMARE.complete.AddExplosionForce(1000f, JENAIMARE.transform.position, 5f,3f,ForceMode.Force);
                 JENAIMARE.Kill();
+
+                if (First_Kill)
+                {
+                    First_Kill = false;
+                    _audio.Play("V_Kill");
+                }
             }
 
             else
