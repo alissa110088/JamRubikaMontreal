@@ -566,7 +566,13 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 49936e53df0947b4e8e9fc32772deebf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1701618839835730116}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6271679252650280177, guid: 49936e53df0947b4e8e9fc32772deebf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5184612564860650766}
+    - targetCorrespondingSourceObject: {fileID: -5148169567547449984, guid: 49936e53df0947b4e8e9fc32772deebf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2296068507948479005}
   m_SourcePrefab: {fileID: 100100000, guid: 49936e53df0947b4e8e9fc32772deebf, type: 3}
 --- !u!4 &73973837036144573 stripped
 Transform:
@@ -578,6 +584,44 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 49936e53df0947b4e8e9fc32772deebf, type: 3}
   m_PrefabInstance: {fileID: 471883647650832470}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4468257615407791574 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5148169567547449984, guid: 49936e53df0947b4e8e9fc32772deebf, type: 3}
+  m_PrefabInstance: {fileID: 471883647650832470}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2296068507948479005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4468257615407791574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0356496350e68874b8ce966f735aac78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HandMovement
+  amplitude: 0.2
+  frequency: -10
+--- !u!1 &5874115171498288295 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6271679252650280177, guid: 49936e53df0947b4e8e9fc32772deebf, type: 3}
+  m_PrefabInstance: {fileID: 471883647650832470}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5184612564860650766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5874115171498288295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0356496350e68874b8ce966f735aac78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HandMovement
+  amplitude: 0.2
+  frequency: 10
 --- !u!1001 &5522922311506265214
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -776,9 +820,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6271679252650280177, guid: 49936e53df0947b4e8e9fc32772deebf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9196396879265175647}
-    - targetCorrespondingSourceObject: {fileID: -5148169567547449984, guid: 49936e53df0947b4e8e9fc32772deebf, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6858713944065204465}
   m_SourcePrefab: {fileID: 100100000, guid: 49936e53df0947b4e8e9fc32772deebf, type: 3}
 --- !u!1 &514525590823073539 stripped
 GameObject:
