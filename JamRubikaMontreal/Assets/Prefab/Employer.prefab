@@ -316,6 +316,7 @@ MonoBehaviour:
   electrifiedState: {fileID: 742283033885154567}
   normalState: {fileID: 6695696581225483939}
   electricalParticle: {fileID: 6007595771380668830}
+  complete: {fileID: 4849819791873240449}
   robotText: {fileID: 443322646610988488}
   waitTime: 0.5
 --- !u!1 &7221827464621096475
