@@ -91,5 +91,10 @@ public class Menu_Pause : MonoBehaviour
     {
         float sliderValue = Slider_Quality.value;
         M_Quality.SetFloat(propertyName, sliderValue);
+
+        if (sliderValue > 4000f)
+        {
+            StartCoroutine(GameManager.Instance.SetCrash());
+        }
     }
 }
