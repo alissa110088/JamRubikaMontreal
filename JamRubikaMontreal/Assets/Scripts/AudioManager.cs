@@ -27,9 +27,10 @@ public class AudioManager : MonoBehaviour
     
     void Start()
     {
-        Play("treadmill1");
-        Play("treadmill2");
-        Play("treadmill3");
+        Play("AMB_Factory");
+        Play("AMB_Carpet");
+        Play("AMB_Labubu");
+        Play("AMB_Neon");
     }
 
     public void Play(string name)
