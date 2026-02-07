@@ -20,14 +20,13 @@ public class PackLabubu : AffectedBySpeed
     private IEnumerator WorkingWait()
     {
         DOTween.Play(transform.DOMoveY(this.transform.position.y - 6.5f, 0.3f));
-        yield return new WaitForSeconds(waitTime * speedMultiplicator);
+        yield return new WaitForSeconds(waitTime / speedMultiplicator + .1f);
         labubuuu.PackLabubu();
         DOTween.Play(transform.DOMoveY(this.transform.position.y + 6.5f, 0.3f));
 
         labubuuu.transform.position =
             new Vector3(labubuuu.transform.position.x, labubuuu.transform.position.y + .02f, labubuuu.transform.position.z);
         labubuuu.isWorking = false;
-        float lTimeToAdd = UnityEngine.Random.Range(0f, 0.8f);
-        waitTime += lTimeToAdd;
+        
     }
 }

@@ -17,6 +17,7 @@ public class ElectrocuteButton : AffectedBySpeed
         {
             if (countClick > 5)
             {
+                JENAIMARE.particleBoom.Play();
                 JENAIMARE.complete.AddExplosionForce(1000f, JENAIMARE.transform.position, 5f,3f,ForceMode.Force);
             }
             JENAIMARE.waitTime = .5f * speedMultiplicator;

@@ -11,6 +11,7 @@ public class WorkStation : AffectedBySpeed
     [SerializeField] private GameObject normalState;
     [SerializeField] private ParticleSystem electricalParticle;
     public Rigidbody complete;
+    public ParticleSystem particleBoom;
     
     public FeedBackRobotEfficacity robotText;
     private labubu labubuuu;

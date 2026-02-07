@@ -24,7 +24,6 @@ public class GameManager : MonoBehaviour
         set
         {
             labubuCounter = value;
-            Debug.Log(value);
             if (labubuCounter >= MaxLabubu)
             {
                 StartCoroutine(SetCrash());
@@ -61,7 +60,6 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator SetCrash()
     {
-        Debug.Log("should work but is not mother fucker");
         var feature = urd.rendererFeatures
             .OfType<FullScreenPassRendererFeature>()
             .FirstOrDefault(f => f.name == "FullScreenPassRendererFeature");
