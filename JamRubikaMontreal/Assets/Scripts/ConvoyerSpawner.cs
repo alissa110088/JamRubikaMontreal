@@ -8,7 +8,7 @@ public class ConvoyerSpawner : AffectedBySpeed
     [SerializeField] private GameObject labubu;
     [SerializeField] private Transform anchorSpawn;
     
-    private float spawnInterval = 4f;
+    private float spawnInterval = 5f;
 
     private void Start()
     {

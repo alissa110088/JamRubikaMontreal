@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System.Collections;
 
 public class ButtonVoid : ButtonMaster
 {
@@ -16,7 +17,14 @@ public class ButtonVoid : ButtonMaster
         else
         {
             Camera.main.GetComponent<Rigidbody>().useGravity = true;
+            StartCoroutine(WaitBeforeCrash());
         }
+    }
+
+    private IEnumerator WaitBeforeCrash()
+    {
+        yield return new WaitForSeconds(3f);
+        StartCoroutine(GameManager.Instance.SetCrash());
     }
 
     public void OnButtonClicked()

@@ -11,7 +11,6 @@ public class Menu_Main : MonoBehaviour
 
     public void Exit()
     {
-        print("Exit");
         Application.Quit();
     }
 }
