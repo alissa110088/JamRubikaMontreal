@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;
+using DG.Tweening;
+
 public class ElectrocuteButton : AffectedBySpeed
 {
     public AudioManager _audio;
@@ -26,10 +28,15 @@ public class ElectrocuteButton : AffectedBySpeed
                 _audio.Play("SFX_Collision");
                 
                 JENAIMARE.complete.AddExplosionForce(1000f, JENAIMARE.transform.position, 5f,3f,ForceMode.Force);
+                JENAIMARE.Kill();
             }
-            JENAIMARE.waitTime = .5f * speedMultiplicator;
-            StartCoroutine(JENAIMARE.Electrocuted());
-            JENAIMARE.robotText.UpdateEfficacity(.5f);
+
+            else
+            {
+                JENAIMARE.waitTime = .5f * speedMultiplicator;
+                StartCoroutine(JENAIMARE.Electrocuted());
+                JENAIMARE.robotText.UpdateEfficacity(.5f);
+            }
         }
     }
 

@@ -50,4 +50,20 @@ public class WorkStation : AffectedBySpeed
         waitTime += lTimeToAdd / (speedMultiplicator + .1f);
         robotText.UpdateEfficacity(waitTime);
     }
+
+    public void Kill()
+    {
+        normalState.SetActive(false);
+        electrifiedState.SetActive(true);
+
+        electrifiedState.transform.DOShakePosition(3f, 1f, 10,90, true, true, ShakeRandomnessMode.Harmonic);
+        
+        // Access the main module to change properties
+        var main = electricalParticle.main;
+
+        // Set the loop property to true
+        main.loop = true;
+        
+        electricalParticle.Play();
+    }
 }
