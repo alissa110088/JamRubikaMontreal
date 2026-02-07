@@ -24,9 +24,6 @@ public class ElectrocuteButton : AffectedBySpeed
         {
             if (countClick > 5)
             {
-                JENAIMARE.particleBoom.Play();
-                _audio.Play("SFX_Collision");
-                
                 JENAIMARE.complete.AddExplosionForce(1000f, JENAIMARE.transform.position, 5f,3f,ForceMode.Force);
                 JENAIMARE.Kill();
             }
