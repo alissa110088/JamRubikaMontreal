@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ButtonLight : ButtonMaster
 {
+    public AudioManager _audio;
+    
     public List<GameObject> lights = new List<GameObject>();
     private bool areLightsON = true;
     private int pressButtonCount = 0;
@@ -44,6 +46,7 @@ public class ButtonLight : ButtonMaster
     public void OnButtonClicked()
     {
         OnClick();
+        _audio.Play("SFX_Button_Game");
     }
 
     IEnumerator LightBurstDelay()
@@ -51,5 +54,10 @@ public class ButtonLight : ButtonMaster
         yield return new WaitForSeconds(3);
         pressButtonCount = 0;
         print("LightBurst Reset");
+    }
+    
+    public void Start()
+    {
+        _audio = GameObject.Find("AUDIO_MANAGER").GetComponent<AudioManager>();
     }
 }

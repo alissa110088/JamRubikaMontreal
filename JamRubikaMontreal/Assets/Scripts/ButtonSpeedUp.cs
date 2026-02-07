@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class ButtonSpeedUp : ButtonMaster
 {
+    public AudioManager _audio;
+    
     public Material convoyerShader;
 
-    void Start()
+    public void Start()
     {
+        _audio = GameObject.Find("AUDIO_MANAGER").GetComponent<AudioManager>();
         convoyerShader.SetFloat("_Speed", 1);
     }
     protected override void OnClick()
@@ -21,5 +24,6 @@ public class ButtonSpeedUp : ButtonMaster
     public void OnButtonClicked()
     {
         OnClick();
+        _audio.Play("SFX_Button_Game");
     }
 }

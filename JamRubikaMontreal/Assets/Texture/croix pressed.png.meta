@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 82fe4a20182691741b6315ebabe2958a
+guid: 40f0c6b1a6541ad46ab6fcff64025fd0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UI_CroixClair_0
+      name: croix pressed_0
       rect:
         serializedVersion: 2
-        x: 133
-        y: 50
-        width: 250
-        height: 250
+        x: 1580
+        y: 701
+        width: 700
+        height: 700
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4b7e4cfd023a60498e3408c30173e41
-      internalID: -114540236
+      spriteID: 5893e229505755f4abebb22c1b41567a
+      internalID: 2110152903
       vertices: []
       indices: 
       edges: []
@@ -122,7 +122,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ff3600221ffa781478dce26a15c8c404
+    spriteID: 0253f721baf65244dbc2750f50bb0525
     internalID: 0
     vertices: []
     indices: 
@@ -132,7 +132,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      UI_CroixClair_0: -114540236
+      croix pressed_0: 2110152903
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

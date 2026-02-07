@@ -17,23 +17,30 @@ public class Menu_Pause : MonoBehaviour
     public Material M_Quality;
     public string propertyName = "Pixels_Levels";
     
+    public AudioManager _audio;
+    
     public void Resume()
     {
         Time.timeScale = 1;
+        SceneManager.UnloadScene("Menu_Pause");
         GameManager.Instance.isMenuOpen = false;
-        Destroy(pauseMenu);
+        _audio.Play("SFX_Button_UI");
+        _audio.VolumeDown("AMB_Labubu");
     }
 
     public void Settings()
     {
         Panel_Settings.SetActive(true);
+        _audio.Play("SFX_Button_UI");
     }
 
     public void Menu()
     {
         Time.timeScale = 1;
-        SceneManager.LoadScene("Menu_Main");
-        print("Menu");
+        SceneManager.UnloadScene("Menu_Pause");
+        GameManager.Instance.isMenuOpen = false;
+        SceneManager.LoadScene("Menu_Main", LoadSceneMode.Additive);
+        _audio.Play("SFX_Button_UI");
     }
     
     
@@ -42,6 +49,10 @@ public class Menu_Pause : MonoBehaviour
 
     void Start()
     {
+        _audio = GameObject.Find("AUDIO_MANAGER").GetComponent<AudioManager>();
+        _audio.Play("SFX_Button_UI");
+        _audio.VolumeUp("AMB_Labubu");
+        
         Slider_Quality.value = M_Quality.GetFloat(propertyName);
         
         if (PlayerPrefs.HasKey("SFX_param"))
@@ -58,9 +69,8 @@ public class Menu_Pause : MonoBehaviour
 
     public void Close()
     {
-        Time.timeScale = 1;
-        GameManager.Instance.isMenuOpen = false;
-        Destroy(pauseMenu);
+        Panel_Settings.SetActive(false);
+        _audio.Play("SFX_Button_UI");
     }
     
     public void SetVolume()

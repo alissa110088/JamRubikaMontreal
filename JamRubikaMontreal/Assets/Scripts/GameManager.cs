@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -45,7 +46,11 @@ public class GameManager : MonoBehaviour
         input = new InputSystem_Actions();
         input.Player.Enable();
         input.Player.Pause.performed += OnPause;
+    }
 
+    private void Start()
+    {
+        SceneManager.LoadScene("Menu_Main", LoadSceneMode.Additive);
     }
 
     private void OnPause(InputAction.CallbackContext ctx)
@@ -54,7 +59,7 @@ public class GameManager : MonoBehaviour
             return;
         isMenuOpen = true;
         Time.timeScale = 0f;
-        Instantiate(pauseMenu);
+        SceneManager.LoadScene("Menu_Pause", LoadSceneMode.Additive);
     }
     
 

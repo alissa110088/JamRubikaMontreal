@@ -1,9 +1,12 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;
 
 public class ButtonVoid : ButtonMaster
 {
+    public AudioManager _audio;
+    
     public List<GameObject> workers = new List<GameObject>();
     private int _indexList = 0;
     protected override void OnClick()
@@ -30,5 +33,11 @@ public class ButtonVoid : ButtonMaster
     public void OnButtonClicked()
     {
         OnClick();
+        _audio.Play("SFX_Button_Game");
+    }
+
+    public void Start()
+    {
+        _audio = GameObject.Find("AUDIO_MANAGER").GetComponent<AudioManager>();
     }
 }
