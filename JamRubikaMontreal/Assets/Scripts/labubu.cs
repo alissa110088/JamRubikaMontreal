@@ -5,7 +5,10 @@ public class labubu : MonoBehaviour
 {
     public bool isWorking = false;
 
+    public AudioManager _audio;
+    
     [SerializeField] private Rigidbody rb;
+    [SerializeField] private ParticleSystem Explosion;
 
     public GameObject unpackLabubu;
     public GameObject packedLabubu;
@@ -14,6 +17,8 @@ public class labubu : MonoBehaviour
     {
         if (other.gameObject.CompareTag("labubu"))
         {
+            Explosion.Play();
+            _audio.Play_Finish("SFX_Collision");
             rb.AddExplosionForce(300f, transform.position, 5f,3f,ForceMode.Force);
         }
     }
@@ -22,5 +27,10 @@ public class labubu : MonoBehaviour
     {
         unpackLabubu.SetActive(false);
         packedLabubu.SetActive(true);
+    }
+    
+    public void Start()
+    {
+        _audio = GameObject.Find("AUDIO_MANAGER").GetComponent<AudioManager>();
     }
 }

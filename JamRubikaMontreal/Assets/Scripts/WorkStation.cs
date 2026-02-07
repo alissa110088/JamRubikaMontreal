@@ -11,7 +11,6 @@ public class WorkStation : AffectedBySpeed
     [SerializeField] private GameObject normalState;
     [SerializeField] private ParticleSystem electricalParticle;
     public Rigidbody complete;
-    public ParticleSystem particleBoom;
     
     public FeedBackRobotEfficacity robotText;
     private labubu labubuuu;
@@ -49,5 +48,21 @@ public class WorkStation : AffectedBySpeed
         float lTimeToAdd = UnityEngine.Random.Range(0f, 0.8f);
         waitTime += lTimeToAdd / (speedMultiplicator + .1f);
         robotText.UpdateEfficacity(waitTime);
+    }
+
+    public void Kill()
+    {
+        normalState.SetActive(false);
+        electrifiedState.SetActive(true);
+
+        electrifiedState.transform.DOShakePosition(3f, 1f, 10,90, true, true, ShakeRandomnessMode.Harmonic);
+        
+        // Access the main module to change properties
+        var main = electricalParticle.main;
+
+        // Set the loop property to true
+        main.loop = true;
+        
+        electricalParticle.Play();
     }
 }

@@ -9,7 +9,7 @@ public class AudioManager : MonoBehaviour
     public Sound[] sounds;
     public static AudioManager instance;
 
-    private void Awake()
+    /*private void Awake()
     {
         if (instance == null)
         {
@@ -23,13 +23,12 @@ public class AudioManager : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
     }
-
+    */
     
     void Start()
     {
         Play("AMB_Factory");
         Play("AMB_Carpet");
-        Play("AMB_Labubu");
         Play("AMB_Neon");
     }
 
@@ -50,7 +49,7 @@ public class AudioManager : MonoBehaviour
         s.source.Play();
     }
 
-    public void Stop()
+    public void Stop(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if(s == null)
@@ -59,5 +58,39 @@ public class AudioManager : MonoBehaviour
             return;
         }
         s.source.Stop();
+    }
+
+    public void VolumeDown(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        s.source.volume = 0.2f;
+    }
+    
+    public void VolumeUp(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        s.source.volume = 0.6f;
+    }
+
+    public void Play_Finish(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return;
+        }
+
+        s.source.outputAudioMixerGroup = s.audioMixerGroup;
+        s.source.clip = s.clip;
+        s.source.loop = s.loop;
+        s.source.volume = s.volume;
+        s.source.pitch = s.pitch;
+        print(s.source.isPlaying);
+        if (!s.source.isPlaying)
+        {
+            print("Playing " + name);
+            s.source.Play();
+        }
     }
 }

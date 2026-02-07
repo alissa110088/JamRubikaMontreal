@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0391f0b0cd9675e41929c4c1447bb7b9
+guid: 64497ad9736f9f040ab12ff7de30f1ac
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "boutton cliqu\xE9_0"
+      name: Letter_Close2_0
       rect:
         serializedVersion: 2
-        x: 165
-        y: 683
-        width: 3500
-        height: 796
+        x: 450
+        y: 600
+        width: 1200
+        height: 1000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 585cec85198794c439f0fcb54002aa0b
-      internalID: 458210979
+      spriteID: f052fec711ab1d645893862f4b3ec34c
+      internalID: 2005339351
       vertices: []
       indices: 
       edges: []
@@ -122,7 +122,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ba13cd1bc97a89b4b81f82285ef5df18
+    spriteID: 8fc136475a185bc4e857310535650267
     internalID: 0
     vertices: []
     indices: 
@@ -132,7 +132,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "boutton cliqu\xE9_0": 458210979
+      Letter_Close2_0: 2005339351
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

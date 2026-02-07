@@ -100,20 +100,20 @@ TextureImporter:
       name: boutton long ouvert_0
       rect:
         serializedVersion: 2
-        x: 170
+        x: 155
         y: 683
         width: 3500
         height: 796
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4ee304b3cc4be24980630e0403406aa
-      internalID: -1022206250
+      spriteID: 653d967067690ac479608b9002f06dc4
+      internalID: -2117719117
       vertices: []
       indices: 
       edges: []
@@ -122,7 +122,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 981617eecedf2f94eb9e88df4465220d
+    spriteID: 3a1539c7361fcbb4da66480e4922e52f
     internalID: 0
     vertices: []
     indices: 
@@ -132,7 +132,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      boutton long ouvert_0: -1022206250
+      boutton long ouvert_0: -2117719117
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

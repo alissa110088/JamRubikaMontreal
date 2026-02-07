@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3393014274784650927
+--- !u!1 &8989226704638184128
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7747453567958202313}
-  - component: {fileID: 8914059451052028688}
+  - component: {fileID: 1588852046966984241}
+  - component: {fileID: 4112693436604745995}
   m_Layer: 0
   m_Name: AUDIO_MANAGER
   m_TagString: Untagged
@@ -17,52 +17,136 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7747453567958202313
+--- !u!4 &1588852046966984241
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3393014274784650927}
+  m_GameObject: {fileID: 8989226704638184128}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.44785, y: 0, z: 0.33246}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8914059451052028688
+--- !u!114 &4112693436604745995
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3393014274784650927}
+  m_GameObject: {fileID: 8989226704638184128}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fc99d161d2c678459ecaba34891fa75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   sounds:
-  - name: treadmill
+  - name: AMB_Factory
+    clip: {fileID: 8300000, guid: b274a3aed337a6a42992d165ab54ae6d, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+    audioMixerGroup: {fileID: 24300002, guid: 3fdf44590d35d9c4fadfaa31c0f91fd2, type: 2}
+  - name: AMB_Carpet
     clip: {fileID: 8300000, guid: 9abdfa07a7a840f43a97fd8f81b0a398, type: 3}
     volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
     audioMixerGroup: {fileID: 24300002, guid: 3fdf44590d35d9c4fadfaa31c0f91fd2, type: 2}
-  - name: treadmill
-    clip: {fileID: 8300000, guid: 9abdfa07a7a840f43a97fd8f81b0a398, type: 3}
+  - name: AMB_Labubu
+    clip: {fileID: 8300000, guid: f16d3984e2f9da546a51fdc66e8dabe3, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    audioMixerGroup: {fileID: 24300002, guid: 3fdf44590d35d9c4fadfaa31c0f91fd2, type: 2}
+  - name: AMB_Neon
+    clip: {fileID: 8300000, guid: 635114968ef1bbb4096371a40b00c2dd, type: 3}
     volume: 1
     pitch: 1
     loop: 1
     source: {fileID: 0}
     audioMixerGroup: {fileID: 24300002, guid: 3fdf44590d35d9c4fadfaa31c0f91fd2, type: 2}
-  - name: treadmill
-    clip: {fileID: 8300000, guid: 9abdfa07a7a840f43a97fd8f81b0a398, type: 3}
+  - name: SFX_Neon
+    clip: {fileID: 8300000, guid: b1a48c4ce628d9e4fb954be7b2a217c8, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    audioMixerGroup: {fileID: 24300002, guid: 3fdf44590d35d9c4fadfaa31c0f91fd2, type: 2}
+  - name: SFX_Collision
+    clip: {fileID: 8300000, guid: 4035bbac58a6fc74bbe181f8ae626500, type: 3}
     volume: 1
     pitch: 1
-    loop: 1
+    loop: 0
+    source: {fileID: 0}
+    audioMixerGroup: {fileID: 24300002, guid: 3fdf44590d35d9c4fadfaa31c0f91fd2, type: 2}
+  - name: SFX_Cursed
+    clip: {fileID: 8300000, guid: dfd197d2fd21e484d906c2b7f8774cac, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    audioMixerGroup: {fileID: 24300002, guid: 3fdf44590d35d9c4fadfaa31c0f91fd2, type: 2}
+  - name: SFX_Zap
+    clip: {fileID: 8300000, guid: 9e008159c8802084eb95d82f3b0b03ff, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    audioMixerGroup: {fileID: 24300002, guid: 3fdf44590d35d9c4fadfaa31c0f91fd2, type: 2}
+  - name: SFX_Button_UI
+    clip: {fileID: 8300000, guid: edd698bf0af942e439f5ef218d944389, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    audioMixerGroup: {fileID: 24300002, guid: 3fdf44590d35d9c4fadfaa31c0f91fd2, type: 2}
+  - name: SFX_Button_Game
+    clip: {fileID: 8300000, guid: edd698bf0af942e439f5ef218d944389, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    audioMixerGroup: {fileID: 24300002, guid: 3fdf44590d35d9c4fadfaa31c0f91fd2, type: 2}
+  - name: V_Start_Game
+    clip: {fileID: 8300000, guid: 84c3f62b2d5ad9d4581e00fc4af47d79, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    audioMixerGroup: {fileID: 24300002, guid: 3fdf44590d35d9c4fadfaa31c0f91fd2, type: 2}
+  - name: V_Cheat
+    clip: {fileID: 8300000, guid: 9e008159c8802084eb95d82f3b0b03ff, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    audioMixerGroup: {fileID: 24300002, guid: 3fdf44590d35d9c4fadfaa31c0f91fd2, type: 2}
+  - name: V_First_Zap
+    clip: {fileID: 8300000, guid: 8b9a1e437a7305445a70b5168e7b8056, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    audioMixerGroup: {fileID: 24300002, guid: 3fdf44590d35d9c4fadfaa31c0f91fd2, type: 2}
+  - name: V_Kill
+    clip: {fileID: 8300000, guid: a11c32280c151d4429c0e31fb7d365be, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    audioMixerGroup: {fileID: 24300002, guid: 3fdf44590d35d9c4fadfaa31c0f91fd2, type: 2}
+  - name: V_Good_Ending
+    clip: {fileID: 8300000, guid: edd698bf0af942e439f5ef218d944389, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
     source: {fileID: 0}
     audioMixerGroup: {fileID: 24300002, guid: 3fdf44590d35d9c4fadfaa31c0f91fd2, type: 2}

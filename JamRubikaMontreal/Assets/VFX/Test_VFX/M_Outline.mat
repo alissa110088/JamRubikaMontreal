@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-1957774612639691124
+--- !u!114 &-9103374276421023264
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,13 +20,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mi_Convoyeur
-  m_Shader: {fileID: -6465566751694194690, guid: 2c297b0a2f436c94c80a3e86672676bc, type: 3}
+  m_Name: M_Outline
+  m_Shader: {fileID: -6465566751694194690, guid: 34af949888fad2541bf826155fe1c590, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 2
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -37,14 +37,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _NormalFromTexture_e8fe050837534404bb89cfe155914ee9_Texture_0_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 66e60d9c13aa49d46ac6d8273d8426a2, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_2d6f4f6829a14bf6911d793e4e6afa8b_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 66e60d9c13aa49d46ac6d8273d8426a2, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -61,8 +53,8 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Speed: 1
+    - _Size: 0.01
     m_Colors:
-    - _Tiling: {r: 10, g: 10, b: 0, a: 0}
+    - _Color: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

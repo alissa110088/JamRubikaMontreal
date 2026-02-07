@@ -5,10 +5,13 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public AudioManager _audio;
+    
     [SerializeField] private int MaxLabubu = 30;
     [SerializeField] private UniversalRendererData urd;
     [SerializeField] private Material crash;
@@ -45,7 +48,11 @@ public class GameManager : MonoBehaviour
         input = new InputSystem_Actions();
         input.Player.Enable();
         input.Player.Pause.performed += OnPause;
-
+    }
+    public void Start()
+    {
+        _audio = GameObject.Find("AUDIO_MANAGER").GetComponent<AudioManager>();
+        SceneManager.LoadScene("Menu_Main", LoadSceneMode.Additive);
     }
 
     private void OnPause(InputAction.CallbackContext ctx)
@@ -54,7 +61,7 @@ public class GameManager : MonoBehaviour
             return;
         isMenuOpen = true;
         Time.timeScale = 0f;
-        Instantiate(pauseMenu);
+        SceneManager.LoadScene("Menu_Pause", LoadSceneMode.Additive);
     }
     
 
@@ -64,7 +71,12 @@ public class GameManager : MonoBehaviour
             .OfType<FullScreenPassRendererFeature>()
             .FirstOrDefault(f => f.name == "FullScreenPassRendererFeature");
         feature.passMaterial = crash;
-        yield return new WaitForSeconds(3f);
+        
+        _audio.Stop("AMB_Labubu");
+        _audio.Play_Finish("SFX_Cursed");
+        
+        yield return new WaitForSeconds(5f);
         Application.Quit();
+        print("Crashed");
     }
 }
