@@ -49,3 +49,5 @@ This project was an exploration of:
 Instead of winning, the player’s objective is to push the game into instability.
 
 ---
+
+![Labubu Factory](lqbubuFqctory.png)
